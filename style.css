@@ -1,0 +1,211 @@
+:root{
+    --main-color:#f45866;
+    --primary-color: #404068;
+    --white:#fff;
+    --bg: #f7f0ed;
+    --light-black:#333;
+    --box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+ }
+ 
+ *{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    transition: .2s linear;
+    text-transform: capitalize;
+ }
+ 
+ html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+ }
+ 
+ html::-webkit-scrollbar{
+    width: .8rem;
+ }
+ 
+ html::-webkit-scrollbar-track{
+    background-color: var(--white);
+ }
+ 
+ html::-webkit-scrollbar-thumb{
+    background-color: var(--primary-color);
+    border-radius: 5rem;
+ }
+ 
+ body{
+    background: var(--bg); 
+ }
+ 
+ body.active{
+   --primary-color:#fff;
+   --light-black:#eee;
+   --white:#333;
+   --bg:#222;
+   --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.4);
+ }
+ 
+ section{
+    padding: 3rem 9%;
+ }
+ 
+ .heading{
+    text-align: center;
+    color:var(--primary-color);
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+    font-size: 4rem;
+    margin-top: 2rem;
+ }
+ 
+ .btn {
+     display: inline-block;
+     margin-top: 1rem;
+     padding: .8rem 2.8rem;
+     border-radius: 5rem;
+     border-top-left-radius: 0;
+     border: 0.2rem solid var(--main-color);
+     cursor: pointer;
+     color: var(--main-color);
+     font-size: 1.7rem;
+     overflow: hidden;
+     z-index: 0;
+     position: relative;
+   }
+   
+   .btn::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     height: 100%;
+     width: 100%;
+     background: var(--main-color);
+     z-index: -1;
+     -webkit-transition: .2s linear;
+     transition: .2s linear;
+     clip-path: circle(0% at 0% 5%);
+   }
+   
+   .btn:hover::before {
+      clip-path: circle(100%);
+   }
+   
+   .btn:hover {
+     color: var(--white);
+   }
+
+   .services .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:2rem;
+ }
+ 
+ .services .box-container .box{
+    text-align: center;
+    padding: 4rem;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+    border-radius: 5rem;
+ }
+ 
+ .services .box-container .box img{
+    margin: 1rem 0;
+    height: 15rem;
+    transition: 500ms ease;
+ }
+
+ .services .box-container .box:hover img{
+    transform: scale(-1) rotate(180deg);
+ }
+ 
+ .services .box-container .box h3{
+    font-size: 2rem;
+    padding:1rem 0;
+    color:var(--primary-color);
+ }
+ 
+ .services .box-container .box p{
+    font-size: 1.5rem;
+    color:var(--light-black);
+    line-height: 2;
+ }
+
+
+ .header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    background: var(--white);
+    box-shadow: var(--box-shadow);
+  }
+  
+  .header .logo{
+     font-size: 2.2rem;
+     font-weight: bolder;
+     color:var(--primary-color);
+  }
+  
+  .header .logo i{
+     color:var(--main-color);
+     padding-right: .5rem;
+  }
+  
+  .header .navbar a{
+     font-size: 1.7rem;
+     margin-left: 2rem;
+     color:var(--primary-color);
+    padding-block: 1.6rem;
+    position: relative; 
+  }
+  
+  .header .navbar a:hover{
+     color: var(--main-color);
+  }
+  
+  .header .navbar a::before {
+     content: "";
+     position: absolute;
+     height: .3rem;
+     border-block: 1px solid var(--main-color);
+     bottom: .5rem;
+     width: 100%;
+     transform: scaleX(0);
+     transform-origin: center;
+     transition: 0.5s ease;
+   }
+  
+   .header .navbar a:is(:hover, :focus)::before { 
+     transform: scaleX(1); 
+   }
+  
+  .header .icons div{
+     height:4.5rem;
+     width:4.5rem;
+     line-height:4.5rem;
+     font-size: 2rem;
+     border-radius: .5rem;
+     margin-left: .5rem;
+     cursor: pointer;
+     color:var(--primary-color);
+     background: var(--main-color);
+     text-align: center;
+  }
+  .header .icons div:hover{
+     color: var(--main-color);
+     background: var(--primary-color);
+  }
+  
+  #menu{
+     display: none;
+  }

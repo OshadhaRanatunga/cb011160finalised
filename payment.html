@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="details.css">
+    <link rel="stylesheet" href="ticket.css">
+    <link rel="stylesheet" href="num.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        #paymentTable {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px auto;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        #paymentTable th, #paymentTable td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ccc;
+            color: black;
+        }
+
+        #paymentTable th {
+            background-color: #f45866;
+            color: black;
+        }
+    </style>
+
+</head>
+<body>
+    <header class="header">
+
+        
+    
+        <nav class="navbar">
+           <a data-aos="zoom-in-left" data-aos-delay="300" href="main.html">Tickets</a>
+           <a data-aos="zoom-in-left" data-aos-delay="450" href="ForeignAdult.html">Foreign Adult</a>
+           <a data-aos="zoom-in-left" data-aos-delay="600" href="ForeignChild.html">Foreign Child</a>
+           <a data-aos="zoom-in-left" data-aos-delay="750" href="LocalAdult.html">Local Adult</a>
+           <a data-aos="zoom-in-left" data-aos-delay="900" href="LocalChild.html">Local Child</a>
+           <a data-aos="zoom-in-left" data-aos-delay="1050" href="Infant.html">Infant</a>
+           <a data-aos="zoom-in-left" data-aos-delay="1200" href="cart.html">Cart</a>
+        </nav>
+        
+       
+    
+    </header>
+    <h1>Payment details</h1>
+    <form id="paymentForm">
+        <div class="input-group">
+            <label for="cardNumber">Credit Card Number:</label>
+            <input type="text" id="cardNumber" name="cardNumber" required>
+        </div>
+        <div class="input-group">
+            <label for="expiryDate">Expiry Date:</label>
+            <input type="date" id="expiryDate" name="expiryDate" required>
+        </div>
+        <div class="input-group">
+            <label for="cvc">CVC Number:</label>
+            <input type="text" id="cvc" name="cvc" pattern="[0-9]{3}" title="Enter a 3-digit number" required>
+        </div>
+        <div class="input-group">
+            <label for="cardholderName">Cardholder's Name:</label>
+            <input type="text" id="cardholderName" name="cardholderName" required>
+        </div>
+        <button type="submit">Submit Payment</button>
+    </form>
+
+    
+    <a href="confirmation.html" class="circle-button">
+        <span class="arrow"></span>
+    </a>
+
+
+    <table id="paymentTable">
+        <tr>
+            <th>Card Number</th>
+            <th>CVC</th>
+            <th>Cardholder's Name</th>
+            <th>Expiry Date</th>
+        </tr>
+    </table>
+    
+
+    
+    
+    <script src="payment.js"></script>
+    
+</body>
+</html>

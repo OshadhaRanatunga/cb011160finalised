@@ -1,0 +1,96 @@
+
+body {
+    background-color: white;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #f45866;
+}
+
+form {
+    background-color: #f45866;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 350px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: black;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+select {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button[type="submit"] {
+    background-color: #f45866;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button[type="submit"]:hover {
+    background-color: white;
+    color: #f45866;
+}
+
+.circle-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  /* Style the arrow inside the circular button */
+  .arrow {
+    width: 20px;
+    height: 20px;
+    border: solid #f45866;
+    border-width: 0 2px 2px 0;
+    transform: rotate(-135deg);
+    transition: border-color 0.3s;
+  }
+  
+  /* Change button color and arrow color on hover */
+  .circle-button:hover {
+    background-color: #f45866;
+  }
+  
+  .circle-button:hover .arrow {
+    border-color: white;
+  }

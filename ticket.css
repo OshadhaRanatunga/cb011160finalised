@@ -1,0 +1,233 @@
+:root{
+    --main-color:#f45866;
+    --primary-color: #404068;
+    --white:#fff;
+    --bg: #f7f0ed;
+    --light-black:#333;
+    --box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+ }
+ 
+ *{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    transition: .2s linear;
+    text-transform: capitalize;
+ }
+ 
+ html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+ }
+ 
+ html::-webkit-scrollbar{
+    width: .8rem;
+ }
+ 
+ html::-webkit-scrollbar-track{
+    background-color: var(--white);
+ }
+ 
+ html::-webkit-scrollbar-thumb{
+    background-color: var(--primary-color);
+    border-radius: 5rem;
+ }
+ 
+ body{
+    background: var(--bg); 
+ }
+ 
+ body.active{
+   --primary-color:#fff;
+   --light-black:#eee;
+   --white:#333;
+   --bg:#222;
+   --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.4);
+ }
+ 
+ section{
+    padding: 3rem 9%;
+ }
+ 
+ .heading{
+    text-align: center;
+    color:var(--primary-color);
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+    font-size: 4rem;
+    margin-top: 7rem;
+ }
+ 
+ .btn {
+     display: inline-block;
+     margin-top: 1rem;
+     padding: .8rem 2.8rem;
+     border-radius: 5rem;
+     border-top-left-radius: 0;
+     border: 0.2rem solid var(--main-color);
+     cursor: pointer;
+     color: var(--main-color);
+     font-size: 1.7rem;
+     overflow: hidden;
+     z-index: 0;
+     position: relative;
+     
+   }
+   
+   .btn::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     height: 100%;
+     width: 100%;
+     background: var(--main-color);
+     z-index: -1;
+     -webkit-transition: .2s linear;
+     transition: .2s linear;
+     clip-path: circle(0% at 0% 5%);
+   }
+   
+   .btn:hover::before {
+      clip-path: circle(100%);
+   }
+   
+   .btn:hover {
+     color: var(--white);
+   }
+
+   .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.register {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    background: var(--white);
+    box-shadow: var(--box-shadow);
+  }
+
+  
+  .header .navbar a{
+     font-size: 1.7rem;
+     margin-left: 2rem;
+     color:var(--primary-color);
+    padding-block: 1.6rem;
+    position: relative; 
+  }
+  
+  .header .navbar a:hover{
+     color: var(--main-color);
+  }
+  
+  .header .navbar a::before {
+     content: "";
+     position: absolute;
+     height: .3rem;
+     border-block: 1px solid var(--main-color);
+     bottom: .5rem;
+     width: 100%;
+     transform: scaleX(0);
+     transform-origin: center;
+     transition: 0.5s ease;
+   }
+  
+   .header .navbar a:is(:hover, :focus)::before { 
+     transform: scaleX(1); 
+   }
+  
+  .header .icons div{
+     height:4.5rem;
+     width:4.5rem;
+     line-height:4.5rem;
+     font-size: 2rem;
+     border-radius: .5rem;
+     margin-left: .5rem;
+     cursor: pointer;
+     color:var(--primary-color);
+     background: var(--main-color);
+     text-align: center;
+  }
+  .header .icons div:hover{
+     color: var(--main-color);
+     background: var(--primary-color);
+  }
+  
+  #menu{
+     display: none;
+  }
+  
+
+  .boxx{
+    margin-top: 25%;
+    margin-left:35%;
+    width: 500px;
+    height: 200px;
+   
+  }
+
+  p{
+    font-size: 18px;
+    margin-right:30px;
+    margin-bottom: 20px;
+  }
+
+  .tickethead{
+    text-align: center;
+    color:var(--primary-color);
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+    font-size: 4rem;
+    margin-top: 7rem;
+
+  }
+
+
+  table {
+    border-collapse: collapse;
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+label{
+    font-size: 15px;
+}
+
+.slot{
+    margin-top: 20px;
+}

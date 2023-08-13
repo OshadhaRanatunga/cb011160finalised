@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="summary.css">
+    <link rel="stylesheet" href="ticket.css">
+    <style>
+        body {
+            background-color: white;
+            color: #f45866;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button[type="submit"] {
+            background-color: #f45866;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #d83b4b;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid white;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+
+        
+    
+        <nav class="navbar">
+           <a data-aos="zoom-in-left" data-aos-delay="300" href="main.html">Tickets</a>
+           <a data-aos="zoom-in-left" data-aos-delay="450" href="ForeignAdult.html">Foreign Adult</a>
+           <a data-aos="zoom-in-left" data-aos-delay="600" href="ForeignChild.html">Foreign Child</a>
+           <a data-aos="zoom-in-left" data-aos-delay="750" href="LocalAdult.html">Local Adult</a>
+           <a data-aos="zoom-in-left" data-aos-delay="900" href="LocalChild.html">Local Child</a>
+           <a data-aos="zoom-in-left" data-aos-delay="1050" href="Infant.html">Infant</a>
+           <a data-aos="zoom-in-left" data-aos-delay="1200" href="cart.html">Cart</a>
+        </nav>
+        
+       
+    
+    </header>
+
+    <h1>Date Selection</h1>
+    <form id="dateForm">
+        <div class="input-group">
+            <label for="selectedDate">Select a Date:</label>
+            <input type="date" id="selectedDate" name="selectedDate" required>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    <h1 class="heading">Summary Table</h1>
+    <div class="tab">
+    <table  id="summaryTable">
+        <!-- The summary table content will be added here dynamically by JavaScript -->
+    </table>
+    </div>
+    <a href="details.html" class="circle-button">
+        <span class="arrow"></span>
+    </a>
+    <script src="tkt.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ticket.css">
+</head>
+<body>
+    <header class="header">
+
+        
+    
+        <nav class="navbar">
+           <a data-aos="zoom-in-left" data-aos-delay="300" href="main.html">Tickets</a>
+           <a data-aos="zoom-in-left" data-aos-delay="450" href="ForeignAdult.html">Foreign Adult</a>
+           <a data-aos="zoom-in-left" data-aos-delay="600" href="ForeignChild.html">Foreign Child</a>
+           <a data-aos="zoom-in-left" data-aos-delay="750" href="LocalAdult.html">Local Adult</a>
+           <a data-aos="zoom-in-left" data-aos-delay="900" href="LocalChild.html">Local Child</a>
+           <a data-aos="zoom-in-left" data-aos-delay="1050" href="Infant.html">Infant</a>
+           <a data-aos="zoom-in-left" data-aos-delay="1200" href="cart.html">Cart</a>
+        </nav>
+        
+       
+    
+    </header>
+    <div class="boxx">
+        <h1 class="tickethead">Infant Ticket</h1>
+        <label for="infant">Number of Tickets:</label>
+        <input type="number" id="infant" min="0" value="0">
+        <br>
+        <button class="btn" onclick="increaseTicket('infant')">Increase</button>
+        <button class="btn" onclick="decreaseTicket('infant')">Decrease</button>
+        <button class="btn" onclick="saveTicketCount('infant')">Save</button>
+        <button class="btn" onclick="calculateAndDisplayTotal('infant')">Calculate Total</button>
+        <p id="total" class="total">Total: $0</p>
+    </div>
+    <script src="tkt.js"></script>
+</body>
+</html>
